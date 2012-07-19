@@ -10,7 +10,7 @@ if len(sys.argv) > 1:
 		try:
 			b = et.fromstring(a.read())
 			c = b.find("channel/image/url")
-			if c != None or False:
+			if c != None:
 				fn = c.text.split("/")[-1]
 				img = urllib2.urlopen(c.text)
 				with open(fn, "wb") as d:
